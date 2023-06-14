@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="OrganizerV2.Views.ViewProperties"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OrganizerV2.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="250">
+
+    <UserControl.DataContext>
+        <local:ViewPropertiesViewModel/>
+    </UserControl.DataContext>
+
+    <StackPanel>
+        <Expander 
+            Header="View Properties" 
+            IsExpanded="True" 
+            BorderBrush="Gray"
+            Margin="2"
+            Padding="2"
+            Background="White">
+            <StackPanel>
+                <StackPanel 
+                    Orientation="Horizontal"
+                    Margin="5 2 5 2">
+                    <CheckBox
+                        x:Name="OnlySelectedViews"
+                        Style="{DynamicResource ToggleButtonStyle}"
+                        IsChecked="{Binding IsOnlySelectedViewsChecked}"/>
+                    <TextBlock 
+                        Text="{Binding OnlySelectedViewsCheckboxContent}"
+                        HorizontalAlignment="Center"
+                        Margin="5 2"/>
+                </StackPanel>
+                <Button
+                    x:Name="CreateClipPlanes"
+                    Content="Create Clip Planes"
+                    Command="{Binding CreateClipPlanesCommand}"/>
+                <Button
+                    x:Name="DeleteClipPlanes"
+                    Content="Delete Clip Planes"
+                    Command="{Binding DeleteClipPlanesCommand}"/>
+                <Button
+                    x:Name="RedrawViews"
+                    Content="Redraw Views"
+                    Command="{Binding RedrawViewsCommand}"/>
+            </StackPanel>
+        </Expander>
+            
+    </StackPanel>
+</UserControl>
