@@ -20,5 +20,6 @@
 
     <StackPanel Margin="3">
         <views:ViewProperties/>
+        <TextBlock Text="{Binding SelectionChangeMessage}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
     </StackPanel>
 </Window>

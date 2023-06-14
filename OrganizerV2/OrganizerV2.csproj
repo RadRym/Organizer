@@ -65,6 +65,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EventsTest.cs" />
+    <Compile Include="Models\TeklaModel.cs" />
     <Compile Include="TeklaModels\ClipPlanes\ClipPlanes.cs" />
     <Compile Include="TeklaModels\Views\Visability.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />

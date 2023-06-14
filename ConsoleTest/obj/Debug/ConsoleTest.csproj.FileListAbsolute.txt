@@ -1,0 +1,16 @@
+E:\Projects C#\Organizer\ConsoleTest\bin\Debug\ConsoleTest.exe.config
+E:\Projects C#\Organizer\ConsoleTest\bin\Debug\ConsoleTest.exe
+E:\Projects C#\Organizer\ConsoleTest\bin\Debug\ConsoleTest.pdb
+E:\Projects C#\Organizer\ConsoleTest\bin\Debug\Tekla.Structures.Datatype.dll
+E:\Projects C#\Organizer\ConsoleTest\bin\Debug\Tekla.Structures.dll
+E:\Projects C#\Organizer\ConsoleTest\bin\Debug\Tekla.Structures.Model.dll
+E:\Projects C#\Organizer\ConsoleTest\bin\Debug\Newtonsoft.Json.dll
+E:\Projects C#\Organizer\ConsoleTest\bin\Debug\Tekla.Structures.xml
+E:\Projects C#\Organizer\ConsoleTest\bin\Debug\Tekla.Structures.Datatype.xml
+E:\Projects C#\Organizer\ConsoleTest\bin\Debug\Tekla.Structures.Model.xml
+E:\Projects C#\Organizer\ConsoleTest\obj\Debug\ConsoleTest.csproj.AssemblyReference.cache
+E:\Projects C#\Organizer\ConsoleTest\obj\Debug\ConsoleTest.csproj.SuggestedBindingRedirects.cache
+E:\Projects C#\Organizer\ConsoleTest\obj\Debug\ConsoleTest.csproj.CoreCompileInputs.cache
+E:\Projects C#\Organizer\ConsoleTest\obj\Debug\ConsoleTest.csproj.CopyComplete
+E:\Projects C#\Organizer\ConsoleTest\obj\Debug\ConsoleTest.exe
+E:\Projects C#\Organizer\ConsoleTest\obj\Debug\ConsoleTest.pdb

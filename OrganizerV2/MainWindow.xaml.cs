@@ -23,7 +23,6 @@ namespace OrganizerV2
     {
         public MainWindow()
         {
-            DataContext = new MainViewModel();
             InitializeComponent();
         }
     }

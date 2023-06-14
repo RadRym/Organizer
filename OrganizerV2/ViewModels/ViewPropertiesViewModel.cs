@@ -4,7 +4,7 @@ using TeklaModels.ClipPlanes;
 
 namespace OrganizerV2.ViewModels
 {
-    public class ViewPropertiesViewModel : ViewModelBase
+    public class ViewPropertiesViewModel : MainViewModel
     {
         private bool _isOnlySelectedViewsChecked;
         private string _onlySelectedViewsCheckboxContent;
