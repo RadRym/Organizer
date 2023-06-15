@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="OrganizerV2.Views.SelectedObjectPropertiesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OrganizerV2.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="250">
+
+    <UserControl.DataContext>
+        <local:SelectedObjectPropertiesViewModel/>
+    </UserControl.DataContext>
+    
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </UserControl.Resources>
+    
+    <Expander 
+            Header="Selected Object Properties" 
+            BorderBrush="Gray"
+            Margin="2"
+            Padding="2"
+            Background="White">
+        <StackPanel 
+            Margin="2"
+            Visibility="{Binding IsViewVisibleBeamProperties, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <UniformGrid Columns="2">
+                <UniformGrid.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Margin" Value="5 0 5 0" />
+                        <Setter Property="FontSize" Value="10" />
+                        <Setter Property="HorizontalAlignment" Value="Right" />
+                    </Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Margin" Value="5 0 5 0" />
+                        <Setter Property="FontSize" Value="10" />
+                        <Setter Property="Padding" Value="1" />
+                        <Setter Property="BorderThickness" Value="0" />
+                        <Setter Property="IsReadOnly" Value="True" />
+                    </Style>
+                </UniformGrid.Resources>
+                <TextBlock Text="Profile" />
+                <TextBox Text="{Binding BeamProfile}" />
+                <TextBlock Text="Name" />
+                <TextBox Text="{Binding BeamName}" />
+                <TextBlock Text="Phase" />
+                <TextBox Text="{Binding BeamPhase}" />
+                <TextBlock Text="Class" />
+                <TextBox Text="{Binding BeamClass}" />
+                <TextBlock Text="Material" />
+                <TextBox Text="{Binding BeamMaterial}" />
+                <TextBlock Text="Part Numbering" />
+                <TextBox Text="{Binding BeamPartStartNumber}"/>
+                <TextBlock Text="Assembly Numbering" />
+                <TextBox Text="{Binding BeamAssemblyStartNumber}" />
+                <TextBlock Text="Temporary ID" />
+                <TextBox Text="{Binding BeamIdentifier}" />
+                <TextBlock Text="Finish" />
+                <TextBox Text="{Binding BeamFinish}" />
+                <TextBlock Text="Is Up To Date?" />
+                <TextBox Text="{Binding BeamIsUpToDate}" />
+                <TextBlock Text="Modification Date" />
+                <TextBox Text="{Binding BeamModificationDate}" />
+                <TextBlock Text="Start Point" />
+                <TextBox Text="{Binding BeamStartPoint}" />
+                <TextBlock Text="End Point" />
+                <TextBox Text="{Binding BeamEndPoint}" />
+            </UniformGrid>
+        </StackPanel>
+    </Expander>
+    
+</UserControl>

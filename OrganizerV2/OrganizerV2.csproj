@@ -65,14 +65,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="EventsTest.cs" />
-    <Compile Include="Models\TeklaModel.cs" />
     <Compile Include="TeklaModels\ClipPlanes\ClipPlanes.cs" />
     <Compile Include="TeklaModels\Views\Visability.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
+    <Compile Include="ViewModels\SelectedObjectPropertiesViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\ViewPropertiesViewModel.cs" />
+    <Compile Include="Views\SelectedObjectPropertiesView.xaml.cs">
+      <DependentUpon>SelectedObjectPropertiesView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ViewPropertiesView.xaml.cs">
       <DependentUpon>ViewPropertiesView.xaml</DependentUpon>
     </Compile>
@@ -96,7 +98,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Styles\TextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\ToggleButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SelectedObjectPropertiesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,6 +142,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

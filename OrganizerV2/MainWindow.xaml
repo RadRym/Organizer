@@ -9,8 +9,8 @@
         mc:Ignorable="d"
         
         Height="auto" 
-        Width="200"
-        SizeToContent="Height"
+        Width="auto"
+        SizeToContent="WidthAndHeight"
         ResizeMode="CanMinimize"
         Topmost="True">
 
@@ -20,6 +20,6 @@
 
     <StackPanel Margin="3">
         <views:ViewProperties/>
-        <TextBlock Text="{Binding SelectionChangeMessage}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        <views:SelectedObjectPropertiesView/>
     </StackPanel>
 </Window>

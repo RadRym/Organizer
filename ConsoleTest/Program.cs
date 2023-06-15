@@ -10,9 +10,9 @@ namespace ConsoleTest
 {
     internal class Program
     {
-        private static Tekla.Structures.Model.Events _events = new Tekla.Structures.Model.Events();
-        private static object _selectionEventHandlerLock = new object();
-        static void Main(string[] args)
+        private static readonly object _selectionEventHandlerLock = new object();
+        private static readonly Events _events = new Events();
+        static void Main()
         {
             _events.SelectionChange += Events_SelectionChangeEvent;
             _events.Register();
@@ -33,11 +33,24 @@ namespace ConsoleTest
                 {
                     while (selectedObjects.MoveNext())
                     {
-                        ModelObject selectedObject = selectedObjects.Current as ModelObject;
-                        if (selectedObject != null)
+                        if (!(selectedObjects.Current is ModelObject selectedObject))
+                            return;
+                        if (selectedObject is Beam)
+                        {
+                            Beam selectedBeam = selectedObject as Beam;
+                            Console.WriteLine("Selection changed event received. Selected object: ");
+                            Console.WriteLine("Assembly Number Prefix: " + selectedBeam.AssemblyNumber.Prefix);
+                            Console.WriteLine("Assembly Number Start Number: " + selectedBeam.AssemblyNumber.StartNumber);
+                            Console.WriteLine("Assembly Number: " + selectedBeam.AssemblyNumber.ToString());
+                            Console.WriteLine("Name: " + selectedBeam.Name);
+                            Console.WriteLine("Class: " + selectedBeam.Class);
+                            Console.WriteLine("Finish: " + selectedBeam.Finish);
+                        }
+                        else
                         {
                             Console.WriteLine("Selection changed event received. Selected object type: " + selectedObject.GetType().Name);
                         }
+
                     }
                 }
                 else
