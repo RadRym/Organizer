@@ -1,0 +1,6 @@
+E:\Projects C#\Organizer\SteelProfilesDB\bin\Debug\SteelProfilesDB.dacpac
+E:\Projects C#\Organizer\SteelProfilesDB\bin\Debug\SteelProfilesDB.dll
+E:\Projects C#\Organizer\SteelProfilesDB\bin\Debug\SteelProfilesDB.pdb
+E:\Projects C#\Organizer\SteelProfilesDB\obj\Debug\SteelProfilesDB.sqlproj.AssemblyReference.cache
+E:\Projects C#\Organizer\SteelProfilesDB\obj\Debug\SteelProfilesDB.dll
+E:\Projects C#\Organizer\SteelProfilesDB\obj\Debug\SteelProfilesDB.pdb

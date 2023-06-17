@@ -65,6 +65,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\MyProfil.cs" />
     <Compile Include="TeklaModels\ClipPlanes\ClipPlanes.cs" />
     <Compile Include="TeklaModels\Views\Visability.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -142,8 +143,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

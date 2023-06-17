@@ -10,6 +10,7 @@
         
         Height="auto" 
         Width="auto"
+        MinWidth="240"
         SizeToContent="WidthAndHeight"
         ResizeMode="CanMinimize"
         Topmost="True">

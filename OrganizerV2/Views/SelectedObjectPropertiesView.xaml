@@ -26,45 +26,61 @@
             Visibility="{Binding IsViewVisibleBeamProperties, Converter={StaticResource BooleanToVisibilityConverter}}">
             <UniformGrid Columns="2">
                 <UniformGrid.Resources>
-                    <Style TargetType="TextBlock">
-                        <Setter Property="Margin" Value="5 0 5 0" />
-                        <Setter Property="FontSize" Value="10" />
-                        <Setter Property="HorizontalAlignment" Value="Right" />
-                    </Style>
                     <Style TargetType="TextBox">
-                        <Setter Property="Margin" Value="5 0 5 0" />
                         <Setter Property="FontSize" Value="10" />
-                        <Setter Property="Padding" Value="1" />
+                        <Setter Property="Padding" Value="0" />
                         <Setter Property="BorderThickness" Value="0" />
                         <Setter Property="IsReadOnly" Value="True" />
+                        <Setter Property="BorderThickness" Value="1" />
+                        <Setter Property="Margin" Value="-0.5" />
                     </Style>
                 </UniformGrid.Resources>
-                <TextBlock Text="Profile" />
-                <TextBox Text="{Binding BeamProfile}" />
-                <TextBlock Text="Name" />
-                <TextBox Text="{Binding BeamName}" />
-                <TextBlock Text="Phase" />
-                <TextBox Text="{Binding BeamPhase}" />
-                <TextBlock Text="Class" />
-                <TextBox Text="{Binding BeamClass}" />
-                <TextBlock Text="Material" />
-                <TextBox Text="{Binding BeamMaterial}" />
-                <TextBlock Text="Part Numbering" />
-                <TextBox Text="{Binding BeamPartStartNumber}"/>
-                <TextBlock Text="Assembly Numbering" />
-                <TextBox Text="{Binding BeamAssemblyStartNumber}" />
-                <TextBlock Text="Temporary ID" />
-                <TextBox Text="{Binding BeamIdentifier}" />
-                <TextBlock Text="Finish" />
-                <TextBox Text="{Binding BeamFinish}" />
-                <TextBlock Text="Is Up To Date?" />
-                <TextBox Text="{Binding BeamIsUpToDate}" />
-                <TextBlock Text="Modification Date" />
-                <TextBox Text="{Binding BeamModificationDate}" />
-                <TextBlock Text="Start Point" />
-                <TextBox Text="{Binding BeamStartPoint}" />
-                <TextBlock Text="End Point" />
-                <TextBox Text="{Binding BeamEndPoint}" />
+                <TextBox 
+                    Text="Selected Beam" 
+                    BorderThickness="1 1 0 1" 
+                    FontWeight="DemiBold" 
+                    FontSize="12" 
+                    Background="{StaticResource AdditionalBlueColor}"/>
+                <TextBox 
+                    Text="" 
+                    BorderThickness="0 1 1 1"
+                    Background="{StaticResource AdditionalBlueColor}"/>
+                <TextBox Text="Profile"/>
+                <TextBox Text="{Binding BeamProperties[BeamProfile]}" />
+                <TextBox Text="Name" />
+                <TextBox Text="{Binding BeamProperties[BeamName]}" />
+                <TextBox Text="Phase" />
+                <TextBox Text="{Binding BeamProperties[BeamPhase]}" />
+                <TextBox Text="Class" />
+                <TextBox Text="{Binding BeamProperties[BeamClass]}" />
+                <TextBox Text="Material" />
+                <TextBox Text="{Binding BeamProperties[BeamMaterial]}" />
+                <TextBox Text="Part Numbering" />
+                <TextBox Text="{Binding BeamProperties[BeamPartStartNumber]}" />
+                <TextBox Text="Assembly Num" />
+                <TextBox Text="{Binding BeamProperties[BeamAssemblyStartNumber]}" />
+                <TextBox Text="Temporary ID" />
+                <TextBox Text="{Binding BeamProperties[BeamIdentifier]}" />
+                <TextBox Text="Finish" />
+                <TextBox Text="{Binding BeamProperties[BeamFinish]}" />
+                <TextBox Text="Is Up To Date?" />
+                <TextBox Text="{Binding BeamProperties[BeamIsUpToDate]}" />
+                <TextBox Text="Modification Date" />
+                <TextBox Text="{Binding BeamProperties[BeamModificationDate]}" />
+                <TextBox Text="Start Point" />
+                <TextBox Text="{Binding BeamProperties[BeamStartPoint]}" />
+                <TextBox Text="End Point" />
+                <TextBox Text="{Binding BeamProperties[BeamEndPoint]}" />
+                <TextBox 
+                    Text="Beam Profile" 
+                    BorderThickness="1 1 0 1" 
+                    FontWeight="DemiBold" 
+                    FontSize="12" 
+                    Background="{StaticResource AdditionalBlueColor}"/>
+                <TextBox 
+                    Text="" 
+                    BorderThickness="0 1 1 1"
+                    Background="{StaticResource AdditionalBlueColor}"/>
             </UniformGrid>
         </StackPanel>
     </Expander>
