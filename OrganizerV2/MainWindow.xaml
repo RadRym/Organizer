@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrganizerV2.ViewModels" 
         xmlns:views="clr-namespace:OrganizerV2.Views"
-        d:DataContext="{d:DesignInstance Type=local:MainViewModel}"
         mc:Ignorable="d"
         
         Height="auto" 
         Width="auto"
         MinWidth="240"
+        MinHeight="200"
         SizeToContent="WidthAndHeight"
         ResizeMode="CanMinimize"
         Topmost="True">
@@ -21,6 +21,6 @@
 
     <StackPanel Margin="3">
         <views:ViewProperties/>
-        <views:SelectedObjectPropertiesView/>
+        <views:ObjectPropertiesView/>
     </StackPanel>
 </Window>

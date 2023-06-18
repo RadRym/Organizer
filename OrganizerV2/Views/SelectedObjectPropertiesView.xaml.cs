@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrganizerV2.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,9 +19,9 @@ namespace OrganizerV2.Views
     /// <summary>
     /// Interaction logic for SelectedObjectPropertiesView.xaml
     /// </summary>
-    public partial class SelectedObjectPropertiesView : UserControl
+    public partial class ObjectPropertiesView : UserControl
     {
-        public SelectedObjectPropertiesView()
+        public ObjectPropertiesView()
         {
             InitializeComponent();
         }

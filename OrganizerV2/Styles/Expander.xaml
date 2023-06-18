@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Definicja stylu dla expandera -->
+    <Style TargetType="Expander">
+        <Setter Property="Background" Value="#ededed"/>
+    </Style>
+
+</ResourceDictionary>

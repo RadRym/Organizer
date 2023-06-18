@@ -17,10 +17,21 @@
             IsExpanded="True" 
             BorderBrush="Gray"
             Margin="2"
-            Padding="2"
-            Background="White">
-            <StackPanel>
+            Padding="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
                 <StackPanel 
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
                     Orientation="Horizontal"
                     Margin="5 2 5 2">
                     <CheckBox
@@ -32,19 +43,33 @@
                         HorizontalAlignment="Center"
                         Margin="5 2"/>
                 </StackPanel>
-                <Button
+                <StackPanel
+                    Grid.Column="0"
+                    Grid.Row="1">
+                    <Button
                     x:Name="CreateClipPlanes"
                     Content="Create Clip Planes"
                     Command="{Binding CreateClipPlanesCommand}"/>
-                <Button
+                    <Button
                     x:Name="DeleteClipPlanes"
                     Content="Delete Clip Planes"
                     Command="{Binding DeleteClipPlanesCommand}"/>
-                <Button
+                    <Button
                     x:Name="RedrawViews"
                     Content="Redraw Views"
                     Command="{Binding RedrawViewsCommand}"/>
-            </StackPanel>
+                    <Button
+                    x:Name="ColorByPhase"
+                    Content="Color By Phase"
+                    Command="{Binding ColorByPhaseCommand}"/>
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Grid.Row="1">
+
+                </StackPanel>
+            </Grid>
+
         </Expander>
             
     </StackPanel>
