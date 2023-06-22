@@ -1,5 +1,4 @@
-﻿using OrganizerV2.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +16,11 @@ using System.Windows.Shapes;
 namespace OrganizerV2.Views
 {
     /// <summary>
-    /// Interaction logic for SelectedObjectPropertiesView.xaml
+    /// Interaction logic for SelectedBeamView.xaml
     /// </summary>
-    public partial class ObjectPropertiesView : UserControl
+    public partial class SelectedBeamView : UserControl
     {
-        public ObjectPropertiesView()
+        public SelectedBeamView()
         {
             InitializeComponent();
         }

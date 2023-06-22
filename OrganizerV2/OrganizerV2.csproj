@@ -109,14 +109,17 @@
     <Compile Include="StringManipulations.cs" />
     <Compile Include="TeklaModels\ClipPlanes\ClipPlanes.cs" />
     <Compile Include="TeklaModels\Views\Visability.cs" />
-    <Compile Include="ViewModels\CrossSectionViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
-    <Compile Include="ViewModels\SelectedObjectPropertiesViewModel.cs" />
+    <Compile Include="ViewModels\SelectedBeamViewModel.cs" />
+    <Compile Include="ViewModels\SelectedObjectViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\ViewPropertiesViewModel.cs" />
-    <Compile Include="Views\SelectedObjectPropertiesView.xaml.cs">
-      <DependentUpon>SelectedObjectPropertiesView.xaml</DependentUpon>
+    <Compile Include="Views\SelectedBeamView.xaml.cs">
+      <DependentUpon>SelectedBeamView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SelectedObjectView.xaml.cs">
+      <DependentUpon>SelectedObjectView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ViewPropertiesView.xaml.cs">
       <DependentUpon>ViewPropertiesView.xaml</DependentUpon>
@@ -157,7 +160,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\SelectedObjectPropertiesView.xaml">
+    <Page Include="Views\SelectedBeamView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SelectedObjectView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -194,8 +201,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Icon_Arrow.png" />
-    <Resource Include="Images\Icon_Arrow_up.png" />
     <Resource Include="Images\profil.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

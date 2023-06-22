@@ -3,11 +3,11 @@
 namespace OrganizerV2.Views
 {
     /// <summary>
-    /// Interaction logic for ViewProperties.xaml
+    /// Interaction logic for SelectedObjectView.xaml
     /// </summary>
-    public partial class ViewPropertiesView : UserControl
+    public partial class SelectedObjectView : UserControl
     {
-        public ViewPropertiesView()
+        public SelectedObjectView()
         {
             InitializeComponent();
         }

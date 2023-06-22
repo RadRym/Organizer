@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\Projects C#\Organizer\OrganizerV2\App.xaml
-9-523285098
+10-36688828
 
-18113414854
+19596143192
 331829517613
-MainWindow.xaml;Styles\Button.xaml;Styles\Common.xaml;Styles\Expander.xaml;Styles\TextBlock.xaml;Styles\TextBox.xaml;Styles\ToggleButton.xaml;Views\SelectedObjectPropertiesView.xaml;Views\ViewPropertiesView.xaml;
+MainWindow.xaml;Styles\Button.xaml;Styles\Common.xaml;Styles\Expander.xaml;Styles\TextBlock.xaml;Styles\TextBox.xaml;Styles\ToggleButton.xaml;Views\SelectedBeamView.xaml;Views\SelectedObjectView.xaml;Views\ViewPropertiesView.xaml;
 
 True
 

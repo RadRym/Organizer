@@ -2,34 +2,18 @@
 using OrganizerV2.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Tekla.Structures.Model;
 
 namespace OrganizerV2.ViewModels
 {
-    public class SelectedObjectPropertiesViewModel : MainViewModel
+    public class SelectedBeamViewModel : MainViewModel
     {
-        private static readonly Events _events = new Events();
-        private static readonly object _selectionEventHandlerLock = new object();
-
-        private bool _isViewVisibleBeamProperties;
         private Dictionary<string, string> _beamProperties;
         private MyProfil _profileGeometry;
 
-        public SelectedObjectPropertiesViewModel()
-        {
-            _events.SelectionChange += Events_SelectionChangeEvent;
-            _events.Register();
-            IsViewVisibleBeamProperties = false;
-        }
-        public bool IsViewVisibleBeamProperties
-        {
-            get { return _isViewVisibleBeamProperties; }
-            set
-            {
-                _isViewVisibleBeamProperties = value;
-                OnPropertyChanged(nameof(IsViewVisibleBeamProperties));
-            }
-        }
         public MyProfil ProfileGeometry
         {
             get { return _profileGeometry; }
@@ -48,50 +32,15 @@ namespace OrganizerV2.ViewModels
                 OnPropertyChanged(nameof(BeamProperties));
             }
         }
-        private void Events_SelectionChangeEvent()
-        {
-            lock (_selectionEventHandlerLock)
-            {
-                ModelObjectEnumerator selectedObjects = new Tekla.Structures.Model.UI.ModelObjectSelector().GetSelectedObjects();
-                if (selectedObjects.GetSize() == 0 || selectedObjects.GetSize() > 1)
-                {
-                    HandleNoBeamSelection();
-                }
-                else
-                {
-                    ProcessSelectedObjects(selectedObjects);
-                }
-            }
-        }
-        private void HandleNoBeamSelection()
-        {
-            IsViewVisibleBeamProperties = false;
-            BeamProperties = null;
-        }
-        private void ProcessSelectedObjects(ModelObjectEnumerator selectedObjects)
-        {
-            while (selectedObjects.MoveNext())
-            {
-                var selectedObject = selectedObjects.Current;
-                if (selectedObject is Assembly || selectedObject is Connection)
-                {
-                    HandleNoBeamSelection();
-                }
-                else if (selectedObject is Beam)
-                {
-                    HandleBeamSelection(selectedObject as Beam);
-                }
-            }
-        }
-        private void HandleBeamSelection(Beam beam)
+        public void HandleBeamSelection(Beam beam)
         {
             var properties = GetBeamProperties(beam);
-            IsViewVisibleBeamProperties = true;
             BeamProperties = properties;
 
             string profileName = MoveThirdLetterToEnd(properties["BeamProfile"]);
             ProfileGeometry = GetProfileGeometryByName(profileName);
         }
+
         public string MoveThirdLetterToEnd(string input)
         {
             if (input != null && input.StartsWith("HE") && input.Length >= 3)
