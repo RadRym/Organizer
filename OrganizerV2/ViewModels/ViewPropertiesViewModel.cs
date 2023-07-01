@@ -11,6 +11,11 @@ namespace OrganizerV2.ViewModels
         public ICommand CreateClipPlanesCommand { get; private set; }
         public ICommand DeleteClipPlanesCommand { get; private set; }
         public ICommand RedrawViewsCommand { get; private set; }
+        public ICommand RestoreWorkPlaneCommand { get; private set; }
+        public ICommand ColorByPhaseCommand { get; private set; }
+        public ICommand ColorByClassCommand { get; private set; }
+        public ICommand ColorByMaterialCommand { get; private set; }
+        public ICommand ColorByProfileCommand { get; private set; }
 
         public ViewPropertiesViewModel()
         {
@@ -18,6 +23,11 @@ namespace OrganizerV2.ViewModels
             CreateClipPlanesCommand = new RelayCommand(ExecuteCreateClipPlanes);
             DeleteClipPlanesCommand = new RelayCommand(ExecuteDeleteClipPlanes);
             RedrawViewsCommand = new RelayCommand(ExecuteRedrawViews);
+            RestoreWorkPlaneCommand = new RelayCommand(ExecuteRestoreWorkPlane);
+            ColorByPhaseCommand = new RelayCommand(ExecuteColorByPhase);
+            ColorByClassCommand = new RelayCommand(ExecuteColorByClass);
+            ColorByMaterialCommand = new RelayCommand(ExecuteColorByMaterial);
+            ColorByProfileCommand = new RelayCommand(ExecuteColorByProfile);
         }
 
         public bool IsOnlySelectedViewsChecked
@@ -55,5 +65,26 @@ namespace OrganizerV2.ViewModels
         {
             Visability.RedrawViews();
         }
+        private void ExecuteRestoreWorkPlane(object parameter)
+        {
+            Visability.RestoreWorkPlane();
+        }
+        private void ExecuteColorByPhase(object parameter)
+        {
+            Visability.ColorRepresentation("ColorByPhase");
+        }
+        private void ExecuteColorByClass(object parameter)
+        {
+            Visability.ColorRepresentation("ColorByClass");
+        }        
+        private void ExecuteColorByMaterial(object parameter)
+        {
+            Visability.ColorRepresentation("ColorByMaterial");
+        }        
+        private void ExecuteColorByProfile(object parameter)
+        {
+            Visability.ColorRepresentation("ColorByProfile");
+        }
+
     }
 }

@@ -8,7 +8,9 @@
         MinWidth="320"
         ResizeMode="CanMinimize"
         SizeToContent="WidthAndHeight"
-        Topmost="True">
+        Topmost="True"
+        Title="Dupa123"
+        WindowStyle="ToolWindow">
 
     <Window.DataContext>
         <viewmodels:MainViewModel/>
@@ -17,6 +19,5 @@
     <StackPanel Margin="3">
         <views:ViewPropertiesView/>
         <views:SelectedObjectView/>
-        <views:SelectedBeamView/>
     </StackPanel>
 </Window>
